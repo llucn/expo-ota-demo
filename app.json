@@ -2,7 +2,7 @@
   "expo": {
     "name": "expo-ota-demo",
     "slug": "expo-ota-demo",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "eooood",
