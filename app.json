@@ -44,13 +44,13 @@
         "origin": false
       },
       "eas": {
-        "projectId": "b181d41b-42b4-4df9-b025-9eb732dba918"
+        "projectId": "27bc258a-c1b4-4fe2-b2ed-7125a2aded85"
       }
     },
     "owner": "llucn",
     "runtimeVersion": "1.0.0",
     "updates": {
-      "url": "https://u.expo.dev/b181d41b-42b4-4df9-b025-9eb732dba918"
+      "url": "https://u.expo.dev/27bc258a-c1b4-4fe2-b2ed-7125a2aded85"
     }
   }
 }
