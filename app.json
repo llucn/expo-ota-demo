@@ -47,6 +47,10 @@
         "projectId": "b181d41b-42b4-4df9-b025-9eb732dba918"
       }
     },
-    "owner": "llucn"
+    "owner": "llucn",
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/b181d41b-42b4-4df9-b025-9eb732dba918"
+    }
   }
 }
