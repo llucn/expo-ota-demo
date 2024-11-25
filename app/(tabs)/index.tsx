@@ -16,11 +16,11 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">React Native Static Server</ThemedText>
+        <ThemedText type="title">Expo Updates</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Embedded HTTP server for React Native applications for Android, iOS, Mac (Catalyst), and Windows platforms. Powered by Lighttpd server, supports both new and old RN architectures.</ThemedText>
+        <ThemedText type="subtitle">expo-updates is a library that enables your app to manage remote updates to your application code. It communicates with the configured remote update service to get information about available updates.</ThemedText>
         <ThemedText>
           Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
           Press{' '}
@@ -35,13 +35,13 @@ export default function HomeScreen() {
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
+        <ThemedText type="subtitle">The expo-updates library can be automatically configured using EAS Update, which is a hosted service that manages and serves updates to your app. To get started with EAS Update, follow the instructions in the Get started guide.</ThemedText>
         <ThemedText>
           Tap the Explore tab to learn more about what's included in this starter app.
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
+        <ThemedText type="subtitle">There are build-time configuration options that control the behavior of the library. For most apps, these configuration values are set in the app config under the updates property.</ThemedText>
         <ThemedText>
           When you're ready, run{' '}
           <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
