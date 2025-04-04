@@ -7,29 +7,39 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
-export default function PlaygroundScreen() {
-  const [modalPage, setModalPage] = useState(<View key={'empty'} />);
-
+export default function CameraHome() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="flask.fill"
-          style={styles.headerImage}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Playground</ThemedText>
-      </ThemedView>
+    <View>
       <Pressable
         style={[styles.button, styles.buttonOpen]}
-        onPress={() => router.navigate('/camera')}>
-        <Text style={styles.textStyle}>Camera</Text>
+        onPress={() => router.navigate('/camera/permission')}>
+        <Text style={styles.textStyle}>Camera Permission</Text>
       </Pressable>
-    </ParallaxScrollView>
+      <View style={{height: 10}} />
+      <Pressable
+        style={[styles.button, styles.buttonOpen]}
+        onPress={() => router.navigate('/camera/camera')}>
+        <Text style={styles.textStyle}>Camera Page</Text>
+      </Pressable>
+      <View style={{height: 10}} />
+      <Pressable
+        style={[styles.button, styles.buttonOpen]}
+        onPress={() => router.navigate('/camera/codeScanner')}>
+        <Text style={styles.textStyle}>Code Scanner Page</Text>
+      </Pressable>
+      <View style={{height: 10}} />
+      <Pressable
+        style={[styles.button, styles.buttonOpen]}
+        onPress={() => router.navigate('/camera/media')}>
+        <Text style={styles.textStyle}>Media Page</Text>
+      </Pressable>
+      <View style={{height: 10}} />
+      <Pressable
+        style={[styles.button, styles.buttonOpen]}
+        onPress={() => router.navigate('/camera/devices')}>
+        <Text style={styles.textStyle}>Devices Page</Text>
+      </Pressable>
+    </View>
   );
 }
 

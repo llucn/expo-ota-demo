@@ -44,7 +44,7 @@ export default function TabLayout() {
         name="playground"
         options={{
           title: 'Playground',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="shuttle.fill" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="flask.fill" color={color} />,
         }}
       />
     </Tabs>
