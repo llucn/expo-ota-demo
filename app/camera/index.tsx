@@ -1,15 +1,26 @@
-import React, {useState} from 'react';
-import { StyleSheet, Modal, View, Text, Pressable, Alert } from 'react-native';
+import React, {useState, useCallback} from 'react';
+import { StyleSheet, View, Text, Pressable } from 'react-native';
 import { router } from 'expo-router';
-
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import { IconSymbol } from '@/components/ui/IconSymbol';
+import { useNavigationHelper } from '@/hooks/useNavigationHelper';
 
 export default function CameraHome() {
+  const [ code, setCode ] = useState('N/A');
+
+  const navigationHelper = useNavigationHelper();
+  
+  const goCodeScanner = useCallback(() => {
+    navigationHelper.navigateWithCallback({
+      name: '/camera/codeScanner',
+      params: {},
+      callback: (s) => {
+        console.log('Get qr code: ', s);
+        setCode(s);
+      }
+    });
+  }, []);
+
   return (
-    <View>
+    <View style={styles.centeredView}>
       <Pressable
         style={[styles.button, styles.buttonOpen]}
         onPress={() => router.navigate('/camera/permission')}>
@@ -24,9 +35,10 @@ export default function CameraHome() {
       <View style={{height: 10}} />
       <Pressable
         style={[styles.button, styles.buttonOpen]}
-        onPress={() => router.navigate('/camera/codeScanner')}>
+        onPress={goCodeScanner}>
         <Text style={styles.textStyle}>Code Scanner Page</Text>
       </Pressable>
+      <Text style={{color: 'red'}}>QR Code: {code}</Text>
       <View style={{height: 10}} />
       <Pressable
         style={[styles.button, styles.buttonOpen]}
@@ -78,6 +90,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 10,
     elevation: 2,
+    width: 200,
   },
   buttonOpen: {
     backgroundColor: '#333333',
