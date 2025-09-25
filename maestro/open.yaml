@@ -1,0 +1,4 @@
+appId: cn.developbranch.com.anonymous.expootademo
+---
+- launchApp:
+    clearState: true

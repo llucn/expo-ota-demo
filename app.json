@@ -2,7 +2,7 @@
   "expo": {
     "name": "expo-ota-demo",
     "slug": "expo-ota-demo",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "eooood",
@@ -10,14 +10,23 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.expootademo"
+      "bundleIdentifier": "cn.developbranch.com.anonymous.expootademo",
+      "infoPlist": {
+        "NSCameraUsageDescription": "$(PRODUCT_NAME) needs access to your Camera.",
+        "NSMicrophoneUsageDescription": "$(PRODUCT_NAME) needs access to your Microphone.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.expootademo"
+      "package": "cn.developbranch.com.anonymous.expootademo",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -36,7 +45,7 @@
         }
       ],
       [
-        "react-native-vision-camera", 
+        "react-native-vision-camera",
         {
           "cameraPermissionText": "$(PRODUCT_NAME) needs access to your Camera.",
           "enableMicrophonePermission": true,
@@ -56,7 +65,7 @@
       }
     },
     "owner": "llucn",
-    "runtimeVersion": "1.0.0",
+    "runtimeVersion": "1.1.0",
     "updates": {
       "url": "https://u.expo.dev/27bc258a-c1b4-4fe2-b2ed-7125a2aded85"
     }
